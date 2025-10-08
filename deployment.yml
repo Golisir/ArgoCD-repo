@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: mydep
 spec:
-  replicas: 2
+  replicas: 6
   selector:
     matchLabels:
       app: swiggy
@@ -18,11 +18,6 @@ spec:
           image: shaikmustafa/dm
           ports:
             - containerPort: 80
-          resources:
-            requests:
-              cpu: "100m"
-            limits:
-              cpu: "500m"
 
 ---
 apiVersion: v1
